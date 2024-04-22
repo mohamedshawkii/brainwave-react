@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    font-family: "Roboto", sans-serif;
+    
+    --main-clr: #161C2D;
+    --accent-clr: #F64B4B;
+    --accent-clr-vr1: #473BF0;
+    --accent-clr-vr2: #83FFA3;
+
+
+    --bg-clr: #FDFDFF;
+    --bg-clr: #F4F7FA;
+}
