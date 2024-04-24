@@ -1,10 +1,10 @@
 import CTA from "../cta/CTA"
 import logo from "../../assets/logo.svg"
-import { CiMenuFries,CiMenuBurger  } from "react-icons/ci";
-import { useState } from "react";
+import { CiMenuFries,CiMenuBurger  } from "react-icons/ci"
+import { useState } from "react"
 
 function NavBar() {
-  const [isCollapsed,setIsCollapsed] = useState(false);
+  const [isCollapsed,setIsCollapsed] = useState(false)
   return (
     <div className='p-6 flex flex-row justify-between items-center gap-6 bg-transparent'>
       <img src={logo} alt="logo" className="pb-1"/>
