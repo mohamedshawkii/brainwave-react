@@ -1,13 +1,18 @@
-
+import { CardServices,CaseStudy,ChooseUs,Footer,Header,NavBar,Rates,Testimonial } from "./components"
 
 function App() {
-
   return (
     <>
-    <div>
-      hello this my first branch Ever1!
-    </div>
-      
+    <div className="app">
+      <NavBar/>
+      <Header/>
+      <CardServices/>
+      <Rates/>
+      <ChooseUs/>
+      <CaseStudy/>
+      <Testimonial/>
+      <Footer/>
+      </div>
     </>
   )
 }
