@@ -6,7 +6,16 @@ import { useState } from "react"
 function NavBar() {
   const [isCollapsed,setIsCollapsed] = useState(false)
   return (
-    <div className='p-6 flex flex-row justify-between items-center gap-6 bg-transparent'>
+    <div className='
+    xtsm:max-md:px-[22px] 
+    md:max-lg:px-[62px] 
+    lg:max-xl:px-[82px]
+    xl:max-wideScreen:px-[208px]
+    py-4 flex flex-row 
+    justify-between
+    sm:max-md:gap-1
+    items-center gap-6 
+    bg-transparent'>
       <img src={logo} alt="logo" className="pb-1"/>
       <ul className="
         flex
@@ -15,21 +24,21 @@ function NavBar() {
         justify-end
         items-end
         xtsm:max-sm:hidden
-        align-middle">
+        align-middle
+        text-center">
         <li className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md
-          text-1xl
           font-medium
-          py-2 px-4 "><a  href="">Demos</a></li>
+          py-2 px-4
+          inline-block "><a className="block" href="">Demos</a></li>
         <li className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
-          text-1xl 
           font-medium 
           py-2 px-4"><a href="">Pages</a></li>
         <li className="
@@ -37,7 +46,6 @@ function NavBar() {
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
-          text-1xl 
           font-medium 
           py-2 px-4"><a href="">Support</a></li>
         <li className="
@@ -45,7 +53,6 @@ function NavBar() {
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
-          text-1xl 
           font-medium 
           py-2 px-4"><a href="">Contact</a></li>
       </ul>

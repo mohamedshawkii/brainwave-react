@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        "xtsm":"320px"
+        "xtsm":"320px",
+        "wideScreen":"2560px"
       },
     },
   },
