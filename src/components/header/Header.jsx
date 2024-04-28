@@ -5,12 +5,10 @@ function Header() {
   return (
       <div className='
           py-10
-          flex 
-          flex-row 
-          justify-center 
-          items-center 
+          flex flex-row 
+          justify-center items-center 
           gap-[6rem]
-          xtsm:max-md:gap-[2rem]
+          xtsm:max-md:gap-[1rem]
           xtsm:max-sm:flex-col 
           xtsm:max-md:px-[32px]
           md:max-lg:px-[72px] 
@@ -24,9 +22,9 @@ function Header() {
           gap-4 
           w-5/12
           xtsm:max-sm:w-8/12'>
-          <p className=' text-[#F64B4B]  font-normal text-md'>Let’s shift your business</p>
+          <p className=' text-[#F64B4B] font-normal text-md'>Let’s shift your business</p>
           <p className=' font-black xtsm:max-sm:text-xl text-4xl'>Shift your business fast with Shade Pro.</p>
-          <p className=' font-norma text-base'>With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.</p>
+          <p className=' font-normal text-base'>With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.</p>
           <CTA/>
         </div>
         <img src={SideImg} alt="" className='
