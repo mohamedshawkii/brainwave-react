@@ -20,8 +20,8 @@ function CardServices() {
         gap-4'>
         <div className='flex flex-col justify-center items-center gap-4 '>
           <div className='flex flex-col justify-center items-center my-[4rem] w-6/12 text-center'>
-            <p className=' text-base font-medium text-[#F64B4B]'>Our services</p>
-            <p className=' text-2xl font-black'>We provide great services for our customers based on needs</p>
+            <p className=' text-base font-medium xtsm:max-sm:text-sm text-[#F64B4B]'>Our services</p>
+            <p className=' text-2xl font-black xtsm:max-sm:text-base'>We provide great services for our customers based on needs</p>
           </div>
           <div className='grid grid-rows-1 gap-4 '>
             <div className='row-start-1 xtsm:max-sm:row-start-1 sm:max-lg:row-start-1'>
