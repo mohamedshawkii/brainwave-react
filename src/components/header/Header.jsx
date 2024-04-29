@@ -4,7 +4,7 @@ import SideImg from '../../assets/SideImgHeader.png'
 function Header() {
   return (
       <div className='
-          py-10
+          py-8
           flex flex-row 
           justify-center items-center 
           gap-[6rem]
