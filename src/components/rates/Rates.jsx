@@ -16,9 +16,9 @@ function Rates() {
       md:max-lg:px-[72px] 
       lg:max-xl:px-[92px]
       xl:max-wideScreen:px-[224px]'>
-      <div className=' w-full flex flex-col justify-center items-center md:max-wideScreen:items-start md:max-wideScreen:justify-start gap-2'>
-        <p className=' font-base text-[#F64B4B] xtsm:max-md:self-center xtsm:max-md:text-sm'>Our Story</p>
-        <p className=' font-bold text-2xl w-6/12 xtsm:max-md:text-base xtsm:max-md:text-center xtsm:max-md:w-3/4 xtsm:max-md:self-center'>We know how everything works and why your business is failing over and over again.</p>
+      <div className='w-full flex flex-col justify-center items-center md:max-wideScreen:items-start md:max-wideScreen:justify-start gap-2'>
+        <p className='font-base text-[#F64B4B] xtsm:max-md:self-center xtsm:max-md:text-sm'>Our Story</p>
+        <p className='font-bold text-2xl w-6/12 xtsm:max-md:text-base xtsm:max-md:text-center xtsm:max-md:w-3/4 xtsm:max-md:self-center'>We know how everything works and why your business is failing over and over again.</p>
       </div>
       <div className='flex flex-row justify-center items-center xtsm:max-md:flex-col gap-20 md:max-lg:gap-8'>
         <img src={PeopleOne} alt="" className='w-full mt-[8rem] mr-auto xtsm:max-md:w-2/4 md:max-lg:w-5/12 xtsm:max-md:mx-auto'/>
