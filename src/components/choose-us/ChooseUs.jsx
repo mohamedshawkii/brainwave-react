@@ -16,6 +16,7 @@ function ChooseUs() {
       justify-center items-center 
       gap-[5rem]
       py-10
+      xtsm:max-md:gap-8
       xtsm:max-md:px-[32px]
       md:max-lg:px-[72px] 
       lg:max-xl:px-[92px]
@@ -40,7 +41,7 @@ function ChooseUs() {
       xtsm:max-lg:flex-col
       justify-center items-center
       gap-20
-      xtsm:max-sm:gap-6
+      xtsm:max-md:gap-8
       xtsm:max-sm:py-[2rem]'>
         <div className='flex flex-col xtsm:max-lg:items-center xtsm:max-lg:justify-center xtsm:max-lg:text-center gap-4'>
           <p  className=' font-bold text-2xl'>Ready to launch your next project?</p>
