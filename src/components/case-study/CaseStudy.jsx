@@ -11,11 +11,11 @@ function CaseStudy() {
     <div className='flex flex-col
     justify-center items-center 
     gap-[4rem]
-    py-10
+    py-[4rem]
     xtsm:max-md:px-[32px]
     md:max-lg:px-[72px] 
     lg:max-xl:px-[92px]
-    xl:px-[224px]'>
+    xl:max-wideScreen:px-[224px]'>
       <div className='
       py-4
       flex flex-col

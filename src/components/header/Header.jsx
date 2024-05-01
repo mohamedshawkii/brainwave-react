@@ -9,7 +9,7 @@ function Header() {
           justify-center items-center 
           gap-[6rem]
           xtsm:max-md:gap-[1rem]
-          xtsm:max-sm:flex-col 
+          xtsm:max-sm:flex-col
           xtsm:max-md:px-[32px]
           md:max-lg:px-[72px] 
           lg:max-xl:px-[92px]
