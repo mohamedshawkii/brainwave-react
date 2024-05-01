@@ -13,11 +13,11 @@ function CardServices() {
         flex flex-col 
         justify-center
         items-center 
+        gap-4
         xtsm:max-md:px-[32px]
-        md:max-lg:px-[72px] 
-        lg:max-xl:px-[92px]
-        xl:max-wideScreen:px-[224px]
-        gap-4'>
+          md:max-lg:px-[72px] 
+          lg:max-xl:px-[92px]
+          xl:max-wideScreen:px-[224px]'>
         <div className='flex flex-col justify-center items-center gap-4 '>
           <div className='flex flex-col justify-center items-center my-[4rem] w-6/12 text-center'>
             <p className=' text-base font-medium xtsm:max-sm:text-sm text-[#F64B4B]'>Our services</p>

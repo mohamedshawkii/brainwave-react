@@ -7,15 +7,15 @@ function NavBar() {
   const [isCollapsed,setIsCollapsed] = useState(false)
   return (
     <div className='
-    xtsm:max-md:px-[22px] 
-    md:max-lg:px-[62px] 
-    lg:max-xl:px-[82px]
-    xl:max-wideScreen:px-[208px]
     py-4 flex flex-row 
     justify-between
     sm:max-md:gap-1
     items-center gap-6 
-    bg-transparent'>
+    bg-transparent
+    xtsm:max-md:px-[32px]
+    md:max-lg:px-[72px] 
+    lg:max-xl:px-[92px]
+    xl:max-wideScreen:px-[224px]'>
       <img src={logo} alt="logo" className="pb-1"/>
       <ul className="
         flex
