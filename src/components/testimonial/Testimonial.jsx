@@ -1,6 +1,5 @@
 import React from "react";
 import OvalTwo from "../../assets/Oval-2.png";
-
 function Testimonial() {
   return (
     <div className=' flex flex-col justify-center items-center gap-8 text-white h-[40rem] bg-[url("/src/assets/BG-2.png")]'>

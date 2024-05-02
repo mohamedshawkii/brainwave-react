@@ -22,6 +22,7 @@ function App() {
       <CaseStudy />
       <Testimonial />
       <Footer />
+
     </>
   );
 }
