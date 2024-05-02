@@ -1,23 +1,27 @@
-import CTA from "../cta/CTA"
-import logo from "../../assets/logo.svg"
-import { CiMenuFries,CiMenuBurger  } from "react-icons/ci"
-import { useState } from "react"
+import CTA from "../../subcomponents/cta/CTA.jsx";
+import logo from "../../assets/logo.svg";
+import { CiMenuFries, CiMenuBurger } from "react-icons/ci";
+import { useState } from "react";
 
 function NavBar() {
-  const [isCollapsed,setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(false);
   return (
-    <div className='
-    py-4 flex flex-row 
+    <div
+      className="
+    py-4
+    flex flex-row
     justify-between
     sm:max-md:gap-1
-    items-center gap-6 
+    items-center gap-6
     bg-transparent
-    xtsm:max-md:px-[32px]
-    md:max-lg:px-[72px] 
-    lg:max-xl:px-[92px]
-    xl:max-wideScreen:px-[224px]'>
-      <img src={logo} alt="logo" className="pb-1"/>
-      <ul className="
+    xtsm:max-md:px-[24px]
+    md:max-lg:px-[48px]
+    lg:max-xl:px-[96px]
+    xl:px-[192px]"
+    >
+      <img src={logo} alt="logo" className="pb-1" />
+      <ul
+        className="
         flex
         flex-row
         gap-3
@@ -25,46 +29,76 @@ function NavBar() {
         items-end
         xtsm:max-sm:hidden
         align-middle
-        text-center">
-        <li className="
+        text-center"
+      >
+        <li
+          className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md
           font-medium
           py-2 px-4
-          inline-block "><a className="block" href="">Demos</a></li>
-        <li className="
+          inline-block "
+        >
+          <a className="block" href="">
+            Demos
+          </a>
+        </li>
+        <li
+          className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
           font-medium 
-          py-2 px-4"><a href="">Pages</a></li>
-        <li className="
+          py-2 px-4"
+        >
+          <a href="">Pages</a>
+        </li>
+        <li
+          className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
           font-medium 
-          py-2 px-4"><a href="">Support</a></li>
-        <li className="
+          py-2 px-4"
+        >
+          <a href="">Support</a>
+        </li>
+        <li
+          className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
           font-medium 
-          py-2 px-4"><a href="">Contact</a></li>
+          py-2 px-4"
+        >
+          <a href="">Contact</a>
+        </li>
       </ul>
 
       <div className="flex flex-row justify-end items-center ml-auto">
-        <div className="mr-6 sm:hidden relative flex flex-col justify-between items-end"> 
-          {isCollapsed ? 
-          <CiMenuBurger size={27} className=" text-[#473BF0] cursor-pointer" onClick={()=>setIsCollapsed(prev => (!prev))} />
-          :<CiMenuFries size={27} className=" text-[#473BF0] cursor-pointer" onClick={()=>setIsCollapsed(prev => (!prev))} />}
+        <div className="sm:hidden relative flex flex-col justify-between items-end">
+          {isCollapsed ? (
+            <CiMenuBurger
+              size={27}
+              className=" text-[#473BF0] cursor-pointer"
+              onClick={() => setIsCollapsed((prev) => !prev)}
+            />
+          ) : (
+            <CiMenuFries
+              size={27}
+              className=" text-[#473BF0] cursor-pointer"
+              onClick={() => setIsCollapsed((prev) => !prev)}
+            />
+          )}
           <div className="mt-10 absolute">
-            {isCollapsed ? 
-            <ul className="
+            {isCollapsed ? (
+              <ul
+                className="
               scale-up-center
               flex
               flex-col
@@ -74,8 +108,10 @@ function NavBar() {
               sm:hidden 
               bg-[#473BF0]
               rounded-md
-              p-6">
-              <li className="
+              p-6"
+              >
+                <li
+                  className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -83,8 +119,12 @@ function NavBar() {
                 font-medium 
                 w-full
                 py-2 px-8
-                align-middle"><a href="">Demos</a></li>
-              <li className="
+                align-middle"
+                >
+                  <a href="">Demos</a>
+                </li>
+                <li
+                  className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -92,8 +132,12 @@ function NavBar() {
                 font-medium 
                 w-full
                 py-2 px-8
-                align-middle"><a href="">Pages</a></li>
-              <li className="
+                align-middle"
+                >
+                  <a href="">Pages</a>
+                </li>
+                <li
+                  className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -101,8 +145,12 @@ function NavBar() {
                 font-medium 
                 w-full
                 py-2 px-8
-                align-middle"><a href="">Support</a></li>
-              <li className="
+                align-middle"
+                >
+                  <a href="">Support</a>
+                </li>
+                <li
+                  className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -110,15 +158,20 @@ function NavBar() {
                 font-medium 
                 w-full
                 py-2 px-8
-                align-middle"><a href="">Contact</a></li>
-            </ul> : null }
+                align-middle"
+                >
+                  <a href="">Contact</a>
+                </li>
+              </ul>
+            ) : null}
           </div>
-
         </div>
-        <CTA/>
+        <div className=" xtsm:max-sm:hidden">
+          <CTA />
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

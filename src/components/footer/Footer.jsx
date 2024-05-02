@@ -1,5 +1,5 @@
 import React from "react";
-import CTA from "../cta/CTA";
+import CTA from "../../subcomponents/cta/CTA.jsx";
 import Logo from "../../assets/logo-white.svg";
 import {
   TiSocialTwitter,
@@ -18,10 +18,10 @@ function Footer() {
       gap-8
       py-[8rem]
       text-gray-300
-      xtsm:max-md:px-[32px]
-      md:max-lg:px-[72px] 
-      lg:max-xl:px-[92px]
-      xl:max-wideScreen:px-[224px]"
+      xtsm:max-md:px-[24px]
+      md:max-lg:px-[48px]
+      lg:max-xl:px-[96px]
+      xl:px-[224px]"
       >
         <div
           className="
@@ -40,15 +40,15 @@ function Footer() {
               coding. Build your next landing page.
             </p>
           </div>
-          <CTA />
+          <CTA styles={{ color: "#83FFA3" }} />
         </div>
 
         <hr className=" border-[#F4F7FA] rounded-sm my-12" />
 
-        <div className=" flex flex-row items-start justify-between gap-16 font-thin">
-          <div className="flex flex-col justify-start items-start gap-8 w-1/4">
+        <div className="flex flex-row items-start xtsm:max-md:items-center xtsm:max-md:justify-center gap-4 font-thin">
+          <div className="flex flex-col justify-start items-start gap-8 w-1/4 xtsm:max-md:text-center xtsm:max-md:items-center xtsm:max-md:justify-center xtsm:max-md:w-full">
             <img src={Logo} alt="" />
-            <p className="w-full">
+            <p className="w-full xtsm:max-md:w-3/4">
               With lots of unique blocks, you can easily build a page without
               coding. Build your next landing page.
             </p>
@@ -77,73 +77,75 @@ function Footer() {
               </ul>
             </nav>
           </div>
-          <div className="flex flex-col justify-start items-start gap-8">
-            <p className=" font-thin text-sm ">Company</p>
-            <ul className=" flex flex-col gap-2 font-normal text-base hover:[&>li]:text-[#83FFA3]">
-              <li>
-                <a href="">About us</a>
-              </li>
-              <li>
-                <a href="">Contact us</a>
-              </li>
-              <li>
-                <a href="">Careers</a>
-              </li>
-              <li>
-                <a href="">Press</a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col justify-start items-start gap-8">
-            <p className=" font-thin text-sm">Product</p>
-            <ul className=" flex flex-col gap-2 font-normal text-base hover:[&>li]:text-[#83FFA3]">
-              <li>
-                <a href="">Features</a>
-              </li>
-              <li>
-                <a href="">Pricing</a>
-              </li>
-              <li>
-                <a href="">News</a>
-              </li>
-              <li>
-                <a href="">Help desk</a>
-              </li>
-              <li>
-                <a href="">Support</a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col justify-start items-start gap-8">
-            <p className=" font-thin text-sm">Services</p>
-            <ul className=" flex flex-col gap-2 font-normal text-base hover:[&>li]:text-[#83FFA3]">
-              <li>
-                <a href="">Digital Marketing</a>
-              </li>
-              <li>
-                <a href="">Content Writing</a>
-              </li>
-              <li>
-                <a href="">SEO for Business</a>
-              </li>
-              <li>
-                <a href="">UI Design</a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col justify-start items-start gap-8">
-            <p className=" font-thin text-sm">Legal</p>
-            <ul className=" flex flex-col gap-2 font-normal text-base hover:[&>li]:text-[#83FFA3]">
-              <li>
-                <a href="">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="">Terms & Conditions</a>
-              </li>
-              <li>
-                <a href="">Return Policy</a>
-              </li>
-            </ul>
+          <div className=" xtsm:max-md:hidden flex flex-row items-start justify-around gap-8 w-full font-thin ml-8">
+            <div className="flex flex-col justify-start items-start gap-8">
+              <p className=" font-thin text-sm ">Company</p>
+              <ul className=" flex flex-col gap-2 font-normal text-base hover:[&>li]:text-[#83FFA3]">
+                <li>
+                  <a href="">About us</a>
+                </li>
+                <li>
+                  <a href="">Contact us</a>
+                </li>
+                <li>
+                  <a href="">Careers</a>
+                </li>
+                <li>
+                  <a href="">Press</a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col justify-start items-start gap-8">
+              <p className=" font-thin text-sm">Product</p>
+              <ul className=" flex flex-col gap-2 font-normal text-base hover:[&>li]:text-[#83FFA3]">
+                <li>
+                  <a href="">Features</a>
+                </li>
+                <li>
+                  <a href="">Pricing</a>
+                </li>
+                <li>
+                  <a href="">News</a>
+                </li>
+                <li>
+                  <a href="">Help desk</a>
+                </li>
+                <li>
+                  <a href="">Support</a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col justify-start items-start gap-8">
+              <p className=" font-thin text-sm">Services</p>
+              <ul className=" flex flex-col gap-2 font-normal text-base hover:[&>li]:text-[#83FFA3]">
+                <li>
+                  <a href="">Digital Marketing</a>
+                </li>
+                <li>
+                  <a href="">Content Writing</a>
+                </li>
+                <li>
+                  <a href="">SEO for Business</a>
+                </li>
+                <li>
+                  <a href="">UI Design</a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col justify-start items-start gap-8">
+              <p className=" font-thin text-sm">Legal</p>
+              <ul className=" flex flex-col gap-2 font-normal text-base hover:[&>li]:text-[#83FFA3]">
+                <li>
+                  <a href="">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="">Return Policy</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
