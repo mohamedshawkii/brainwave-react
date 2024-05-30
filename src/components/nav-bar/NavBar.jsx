@@ -4,9 +4,24 @@ import { CiMenuFries, CiMenuBurger } from "react-icons/ci";
 import { useState } from "react";
 
 function NavBar() {
+  const NavLinks = [
+    {
+      LinkName: "Demos",
+    },
+    {
+      LinkName: "Pages",
+    },
+    {
+      LinkName: "Support",
+    },
+    {
+      LinkName: "Contact",
+    },
+  ];
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isActive, setIsActive] = useState("Demos");
   return (
-    <div
+    <nav
       className="
     py-4
     flex flex-row
@@ -20,8 +35,9 @@ function NavBar() {
     xl:px-[192px]"
     >
       <img src={logo} alt="logo" className="pb-1" />
-      <ul
-        className="
+      {NavLinks.map((item) => (
+        <div
+          className="
         flex
         flex-row
         gap-5
@@ -30,65 +46,25 @@ function NavBar() {
         xtsm:max-sm:hidden
         align-middle
         text-center"
-      >
-        <a href="">
-          <li
-            className="
-            text-[#161C2D]
-            hover:bg-[#473BF0]
-            hover:text-white
-            rounded-md
-            font-medium
-            py-1 px-3
-            "
+        >
+          <button
+            onClick={() => setIsActive(item.LinkName)}
+            href=""
+            className={`
+           rounded-md
+           font-medium
+           py-1 px-3
+           ${
+             item.LinkName === isActive
+               ? "text-white bg-[#473BF0] "
+               : "text-[#161C2D]"
+           }
+           `}
           >
-            Demos
-          </li>
-        </a>
-
-        <a href="">
-          <li
-            className="
-          text-[#161C2D]
-          hover:bg-[#473BF0]
-          hover:text-white
-          rounded-md 
-          font-medium 
-          py-1 px-3"
-          >
-            Pages
-          </li>
-        </a>
-
-        <a href="">
-          <li
-            className="
-          text-[#161C2D]
-          hover:bg-[#473BF0]
-          hover:text-white
-          rounded-md 
-          font-medium 
-          py-1 px-3"
-          >
-            Support
-          </li>
-        </a>
-
-        <a href="">
-          <li
-            className="
-          text-[#161C2D]
-          hover:bg-[#473BF0]
-          hover:text-white
-          rounded-md 
-          font-medium 
-          py-1 px-3"
-          >
-            Contact
-          </li>
-        </a>
-      </ul>
-
+            {item.LinkName}
+          </button>
+        </div>
+      ))}
       <div className="flex flex-row justify-end items-center ml-auto">
         <div className="sm:hidden relative flex flex-col justify-between items-end">
           {isCollapsed ? (
@@ -100,14 +76,15 @@ function NavBar() {
           ) : (
             <CiMenuFries
               size={27}
-              className=" text-[#473BF0] cursor-pointer"
+              className="text-[#473BF0] cursor-pointer"
               onClick={() => setIsCollapsed((prev) => !prev)}
             />
           )}
           <div className="mt-10 absolute">
             {isCollapsed ? (
-              <ul
-                className="
+              <nav>
+                <ul
+                  className="
               scale-up-center
               flex
               flex-col
@@ -118,10 +95,10 @@ function NavBar() {
               bg-[#473BF0]
               rounded-md
               p-6"
-              >
-                <a href="">
-                  <li
-                    className="
+                >
+                  <a href="">
+                    <li
+                      className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -130,13 +107,13 @@ function NavBar() {
                 w-full
                 py-2 px-8
                 text-center"
-                  >
-                    Demos
-                  </li>
-                </a>
-                <a href="">
-                  <li
-                    className="
+                    >
+                      Demos
+                    </li>
+                  </a>
+                  <a href="">
+                    <li
+                      className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -145,13 +122,13 @@ function NavBar() {
                 w-full
                 py-2 px-8
                 text-center"
-                  >
-                    Pages
-                  </li>
-                </a>
-                <a href="">
-                  <li
-                    className="
+                    >
+                      Pages
+                    </li>
+                  </a>
+                  <a href="">
+                    <li
+                      className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -160,13 +137,13 @@ function NavBar() {
                 w-full
                 py-2 px-8
                 text-center"
-                  >
-                    Support
-                  </li>
-                </a>
-                <a href="">
-                  <li
-                    className="
+                    >
+                      Support
+                    </li>
+                  </a>
+                  <a href="">
+                    <li
+                      className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -175,11 +152,12 @@ function NavBar() {
                 w-full
                 py-2 px-8
                 text-center"
-                  >
-                    Contact
-                  </li>
-                </a>
-              </ul>
+                    >
+                      Contact
+                    </li>
+                  </a>
+                </ul>
+              </nav>
             ) : null}
           </div>
         </div>
@@ -187,7 +165,7 @@ function NavBar() {
           <CTAOnLightBg />
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
