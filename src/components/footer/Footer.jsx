@@ -22,6 +22,7 @@ function Footer() {
       md:max-lg:px-[48px]
       lg:max-xl:px-[96px]
       xl:px-[224px]"
+
       >
         <div
           className="
