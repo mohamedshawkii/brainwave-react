@@ -33,14 +33,14 @@ function CaseStudy() {
       <div className=" grid grid-cols-2 grid-rows-1 xtsm:max-md:w-4/6 xtsm:max-md:grid-cols-1 gap-16">
         <div className="row-span-2">
           <motion.img src={ImgeTwo} alt="" 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1,  x:0}}
           transition={{ duration: 1.5, ease:"easeIn" }}
           />
           <motion.div className=" ml-8 my-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5, ease:"easeIn" }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1,  x:0}}
+          transition={{ delay: 0.20, duration: 1.5, ease:"easeIn" }}
           >
             <p>Graphic Design</p>
             <p className="font-bold text-lg">AB.S Snack Packaging</p>
@@ -48,14 +48,14 @@ function CaseStudy() {
         </div>
         <div className="">
           <motion.img src={ImgeOne} alt="" 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1,  x:0}}
           transition={{ duration: 1.5, ease:"easeIn" }}
           />
           <motion.div className=" ml-8 my-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5, ease:"easeIn" }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1,  x:0}}
+          transition={{ delay: 0.20, duration: 1.5, ease:"easeIn" }}
           >
             <p>Graphic Design</p>
             <p className="font-bold text-lg">Aura Branding Design</p>
@@ -63,14 +63,14 @@ function CaseStudy() {
         </div>
         <div className="row-span-2">
           <motion.img src={ImgeThree} alt="" 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1,  x:0}}
           transition={{ duration: 1.5, ease:"easeIn" }}
           />
           <motion.div className=" ml-8 my-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5, ease:"easeIn" }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1,  x:0}}
+          transition={{ delay: 0.20, duration: 1.5, ease:"easeIn" }}
           >
             <p>Web Development</p>
             <p className="font-bold text-lg">Gradient Website Development</p>
@@ -78,15 +78,14 @@ function CaseStudy() {
         </div>
         <div className="">
           <motion.img src={ImgeFour} alt="" 
-          
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1,  x:0}}
           transition={{ duration: 1.5, ease:"easeIn" }}
           />
           <motion.div className="ml-8 my-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5, ease:"easeIn" }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1,  x:0}}
+          transition={{ delay: 0.20, duration: 1.5, ease:"easeIn" }}
           >
             <p>Content Writing</p>
             <p className="font-bold text-lg">Magazine Content Writing</p>
