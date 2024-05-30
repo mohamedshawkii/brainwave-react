@@ -1,6 +1,7 @@
-import React from "react";
-import CTA from "../../subcomponents/cta/CTA.jsx";
+import CTAOnLightBg from "../../subcomponents/cta/CTAOnLightBg.jsx";
 import SideImg from "../../assets/SideImgHeader.png";
+import { motion } from "framer-motion";
+
 function Header() {
   return (
     <div
@@ -18,36 +19,59 @@ function Header() {
     >
       <div
         className="
-          flex 
-          flex-col
-          justify-start 
-          items-start 
-          gap-4 
-          w-5/12
-          xtsm:max-sm:w-full"
+        flex 
+        flex-col
+        justify-start 
+        items-start 
+        gap-4 
+        w-5/12
+        xtsm:max-sm:w-full"
       >
-        <p className=" text-[#F64B4B] font-normal text-md">
+        <motion.p
+          className=" text-[#F64B4B] font-normal text-md"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, eae: "easeOut", delay: 0.2 }}
+        >
           Let’s shift your business
-        </p>
-        <p className=" font-black xtsm:max-sm:text-xl text-4xl">
+        </motion.p>
+        <motion.p
+          className=" font-black xtsm:max-sm:text-xl text-4xl"
+          initial={{ opacity: 0, x: -120 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, eae: "easeOut", delay: 0.2 }}
+        >
           Shift your business fast with Shade Pro.
-        </p>
-        <p className=" font-normal text-base">
+        </motion.p>
+        <motion.p
+          className=" font-normal text-base"
+          initial={{ opacity: 0, x: -130 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, eae: "easeOut", delay: 0.2 }}
+        >
           With lots of unique blocks, you can easily build a page without
           coding. Build your next consultancy website within few minutes.
-        </p>
-        <div className=" xtsm:max-sm:hidden">
-          <CTA />
-        </div>
+        </motion.p>
+        <motion.div
+          className=" xtsm:max-sm:hidden"
+          initial={{ opacity: 0, x: -135 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, eae: "easeOut", delay: 0.2 }}
+        >
+          <CTAOnLightBg />
+        </motion.div>
       </div>
-      <img
-        src={SideImg}
-        alt=""
+      <motion.div
         className="
-        xtsm:max-sm:w-7/12  
-        sm:max-2xl:w-2/6
-        2xl:max-wideScreen:w-1/6  "
-      />
+          xtsm:max-sm:w-7/12  
+          sm:max-2xl:w-2/6
+          2xl:max-wideScreen:w-1/6  "
+        initial={{ opacity: 0, x: 120 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, eae: "easeOut", delay: 0.2 }}
+      >
+        <img src={SideImg} alt="" />
+      </motion.div>
     </div>
   );
 }

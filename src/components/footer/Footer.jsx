@@ -1,6 +1,6 @@
 import React from "react";
-import CTA from "../../subcomponents/cta/CTA.jsx";
 import Logo from "../../assets/logo-white.svg";
+import CTAOnDarkBg from "../../subcomponents/cta/CTAOnDarkBg";
 import {
   TiSocialTwitter,
   TiSocialFacebook,
@@ -40,10 +40,10 @@ function Footer() {
               coding. Build your next landing page.
             </p>
           </div>
-          <CTA styles={{ color: "#83FFA3" }} />
+          <CTAOnDarkBg styles={{ color: "#83FFA3" }} />
         </div>
 
-        <hr className=" border-[#F4F7FA] rounded-sm my-12" />
+        <hr className="self-center w-full border-1 border-[#F4F7FA] rounded-xl my-10" />
 
         <div className="flex flex-row items-start xtsm:max-md:items-center xtsm:max-md:justify-center gap-4 font-thin">
           <div className="flex flex-col justify-start items-start gap-8 w-1/4 xtsm:max-md:text-center xtsm:max-md:items-center xtsm:max-md:justify-center xtsm:max-md:w-full">
@@ -77,6 +77,7 @@ function Footer() {
               </ul>
             </nav>
           </div>
+
           <div className=" xtsm:max-md:hidden flex flex-row items-start justify-around gap-8 w-full font-thin ml-8">
             <div className="flex flex-col justify-start items-start gap-8">
               <p className=" font-thin text-sm ">Company</p>

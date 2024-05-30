@@ -1,11 +1,12 @@
 import React from "react";
-import ReasonProfile from '../../subcomponents/reasonprofile/ReasonProfile.jsx';
+import ReasonProfile from "../../subcomponents/reasonprofile/ReasonProfile.jsx";
 import IconZero from "../../assets/Icon-0.png";
 import IconOne from "../../assets/Icon-1.png";
 import IconTwo from "../../assets/Icon-2.png";
 import IconThree from "../../assets/Icon-3.png";
 import DarkHalftone from "../../assets/dark-halftone.svg";
-import CTA from "../../subcomponents/cta/CTA.jsx";
+import CTAOnLightBg from "../../subcomponents/cta/CTAOnLightBg.jsx";
+import { motion } from "framer-motion";
 
 function ChooseUs() {
   return (
@@ -34,36 +35,42 @@ function ChooseUs() {
           People choose us because we serve the best for everyone
         </p>
       </div>
+
       <img src={DarkHalftone} alt="" className=" absolute top-0 left-0" />
-      <div className=" grid grid-cols-2 grid-rows-2 gap-8 w-4/6 content-center xtsm:max-sm:w-5/6 xtsm:max-lg:grid-row-none xtsm:max-lg:grid-cols-1">
-        <ReasonProfile
-          ProfileImg={IconZero}
-          title={"Dedicated project manager"}
-          pragraph={
-            "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
-          }
-        />
-        <ReasonProfile
-          ProfileImg={IconOne}
-          title={"Organized tasks"}
-          pragraph={
-            "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
-          }
-        />
-        <ReasonProfile
-          ProfileImg={IconTwo}
-          title={"Easy feedback sharing"}
-          pragraph={
-            "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
-          }
-        />
-        <ReasonProfile
-          ProfileImg={IconThree}
-          title={"Never miss deadline"}
-          pragraph={
-            "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
-          }
-        />
+
+      <div
+        className="grid grid-cols-2 grid-rows-2 gap-8 w-4/6 content-center
+       xtsm:max-sm:w-5/6 xtsm:max-lg:grid-row-none xtsm:max-lg:grid-cols-1"
+      >
+        
+          <ReasonProfile
+            ProfileImg={IconZero}
+            title={"Dedicated project manager"}
+            pragraph={
+              "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
+            }
+          />
+          <ReasonProfile
+            ProfileImg={IconOne}
+            title={"Organized tasks"}
+            pragraph={
+              "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
+            }
+          />
+          <ReasonProfile
+            ProfileImg={IconTwo}
+            title={"Easy feedback sharing"}
+            pragraph={
+              "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
+            }
+          />
+          <ReasonProfile
+            ProfileImg={IconThree}
+            title={"Never miss deadline"}
+            pragraph={
+              "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
+            }
+          />
       </div>
       <div
         className="
@@ -84,7 +91,7 @@ function ChooseUs() {
             coding. Build your next landing page.
           </p>
         </div>
-        <CTA />
+        <CTAOnLightBg />
       </div>
     </div>
   );

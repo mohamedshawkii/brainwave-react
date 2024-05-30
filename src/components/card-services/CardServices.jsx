@@ -5,6 +5,17 @@ import ProgrammingRafiki from "../../assets/Programming-rafiki.png";
 import NotesRafiki from "../../assets/Notes-rafiki.png";
 import Oval1 from "../../assets/Oval-1.png";
 import stars from "../../assets/stars.svg";
+import { motion, spring } from "framer-motion";
+
+const varientCard = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
 
 function CardServices() {
   return (
@@ -14,7 +25,7 @@ function CardServices() {
         flex flex-col 
         justify-center
         items-center 
-        gap-4
+        gap-2
         xtsm:max-md:px-[24px]
         md:max-lg:px-[48px]
         lg:max-xl:px-[96px]
@@ -29,8 +40,16 @@ function CardServices() {
               We provide great services for our customers based on needs
             </p>
           </div>
-          <div className="grid grid-rows-1 gap-4 ">
-            <div className="row-start-1 xtsm:max-sm:row-start-1 sm:max-lg:row-start-1">
+          <motion.div
+            className="grid grid-rows-1 gap-4 "
+            variants={varientCard}
+            initial="hidden"
+            whileInView="show"
+          >
+            <motion.div
+              className="row-start-1 xtsm:max-sm:row-start-1 sm:max-lg:row-start-1"
+              variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
+            >
               <Cards
                 styles={{ backgroundColor: "#83FFA3" }}
                 ImgeWidth={{ height: 100 }}
@@ -40,8 +59,11 @@ function CardServices() {
                   "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
                 }
               />
-            </div>
-            <div className="row-start-1 xtsm:max-sm:row-start-2 sm:max-lg:row-start-1">
+            </motion.div>
+            <motion.div
+              className="row-start-1 xtsm:max-sm:row-start-2 sm:max-lg:row-start-1"
+              variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
+            >
               <Cards
                 styles={{ backgroundColor: "#473BF0" }}
                 ImgeWidth={{ height: 100 }}
@@ -51,8 +73,11 @@ function CardServices() {
                   "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
                 }
               />
-            </div>
-            <div className="row-start-1 xtsm:max-sm:row-start-3 sm:max-lg:row-start-3">
+            </motion.div>
+            <motion.div
+              className="row-start-1 xtsm:max-sm:row-start-3 sm:max-lg:row-start-3"
+              variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
+            >
               <Cards
                 styles={{ backgroundColor: "#F64B4B" }}
                 ImgeWidth={{ height: 100 }}
@@ -62,13 +87,18 @@ function CardServices() {
                   "With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
                 }
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
         <div className="flex flex-row justify-center items-center gap-4 my-[4rem] xtsm:max-md:flex-col">
-          <div className="flex flex-row justify-center items-center">
+          <motion.div
+            className="flex flex-row justify-center items-center"
+            initial={{ opacity: "", x: 100 }}
+            whileInView={{ opacity: "", x: 0 }}
+            transition={{ type: "spring" }}
+          >
             <img src={Oval1} alt="profile pic" className="w-3/4" />
-          </div>
+          </motion.div>
           <div
             className="
           flex flex-col line-clamp-3 gap-4 w-4/6 
@@ -76,15 +106,30 @@ function CardServices() {
           xtsm:max-md:items-center 
           xtsm:max-md:text-center "
           >
-            <img src={stars} className="w-20 font-bold" alt="svg stars" />
-            <p className="font-bold">
+            <motion.div
+              initial={{ opacity: "", x: -100 }}
+              whileInView={{ opacity: "", x: 0 }}
+              transition={{ type: "spring" }}
+            >
+              <img src={stars} className="w-20 font-bold" alt="svg stars" />
+            </motion.div>
+            <motion.p
+              className="font-bold"
+              initial={{ opacity: "", x: 240 }}
+              whileInView={{ opacity: "", x: 0}}
+              transition={{ type: "spring",}}
+            >
               “OMG! I cannot believe that I have got a brand new landing page
               after getting Albino. It was super easy to edit and publish.”
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+              initial={{ opacity: "", x: -100 }}
+              whileInView={{ opacity: "", x: 0 }}
+              transition={{ type: "spring" }}
+            >
               <span className=" font-semibold mr-1">Franklin Hicks</span>Web
               Developer
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
