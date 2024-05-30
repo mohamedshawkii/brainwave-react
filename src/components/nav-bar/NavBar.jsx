@@ -1,4 +1,4 @@
-import CTA from "../../subcomponents/cta/CTA.jsx";
+import CTAOnLightBg from "../../subcomponents/cta/CTAOnLightBg.jsx";
 import logo from "../../assets/logo.svg";
 import { CiMenuFries, CiMenuBurger } from "react-icons/ci";
 import { useState } from "react";
@@ -24,60 +24,69 @@ function NavBar() {
         className="
         flex
         flex-row
-        gap-3
+        gap-5
         justify-end
         items-end
         xtsm:max-sm:hidden
         align-middle
         text-center"
       >
-        <li
-          className="
-          text-[#161C2D]
-          hover:bg-[#473BF0]
-          hover:text-white
-          rounded-md
-          font-medium
-          py-2 px-4
-          inline-block "
-        >
-          <a className="block" href="">
+        <a href="">
+          <li
+            className="
+            text-[#161C2D]
+            hover:bg-[#473BF0]
+            hover:text-white
+            rounded-md
+            font-medium
+            py-1 px-3
+            "
+          >
             Demos
-          </a>
-        </li>
-        <li
-          className="
+          </li>
+        </a>
+
+        <a href="">
+          <li
+            className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
           font-medium 
-          py-2 px-4"
-        >
-          <a href="">Pages</a>
-        </li>
-        <li
-          className="
+          py-1 px-3"
+          >
+            Pages
+          </li>
+        </a>
+
+        <a href="">
+          <li
+            className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
           font-medium 
-          py-2 px-4"
-        >
-          <a href="">Support</a>
-        </li>
-        <li
-          className="
+          py-1 px-3"
+          >
+            Support
+          </li>
+        </a>
+
+        <a href="">
+          <li
+            className="
           text-[#161C2D]
           hover:bg-[#473BF0]
           hover:text-white
           rounded-md 
           font-medium 
-          py-2 px-4"
-        >
-          <a href="">Contact</a>
-        </li>
+          py-1 px-3"
+          >
+            Contact
+          </li>
+        </a>
       </ul>
 
       <div className="flex flex-row justify-end items-center ml-auto">
@@ -103,15 +112,16 @@ function NavBar() {
               flex
               flex-col
               gap-2
-              justify-end
-              items-end
+              justify-center
+              items-center
               sm:hidden 
               bg-[#473BF0]
               rounded-md
               p-6"
               >
-                <li
-                  className="
+                <a href="">
+                  <li
+                    className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -119,12 +129,14 @@ function NavBar() {
                 font-medium 
                 w-full
                 py-2 px-8
-                align-middle"
-                >
-                  <a href="">Demos</a>
-                </li>
-                <li
-                  className="
+                text-center"
+                  >
+                    Demos
+                  </li>
+                </a>
+                <a href="">
+                  <li
+                    className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -132,12 +144,14 @@ function NavBar() {
                 font-medium 
                 w-full
                 py-2 px-8
-                align-middle"
-                >
-                  <a href="">Pages</a>
-                </li>
-                <li
-                  className="
+                text-center"
+                  >
+                    Pages
+                  </li>
+                </a>
+                <a href="">
+                  <li
+                    className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -145,12 +159,14 @@ function NavBar() {
                 font-medium 
                 w-full
                 py-2 px-8
-                align-middle"
-                >
-                  <a href="">Support</a>
-                </li>
-                <li
-                  className="
+                text-center"
+                  >
+                    Support
+                  </li>
+                </a>
+                <a href="">
+                  <li
+                    className="
                 text-white
                 hover:bg-[#F64B4B]
                 hover:text-[#161C2D]
@@ -158,16 +174,17 @@ function NavBar() {
                 font-medium 
                 w-full
                 py-2 px-8
-                align-middle"
-                >
-                  <a href="">Contact</a>
-                </li>
+                text-center"
+                  >
+                    Contact
+                  </li>
+                </a>
               </ul>
             ) : null}
           </div>
         </div>
         <div className=" xtsm:max-sm:hidden">
-          <CTA />
+          <CTAOnLightBg />
         </div>
       </div>
     </div>
