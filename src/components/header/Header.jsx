@@ -64,9 +64,10 @@ function Header() {
         </div>
         <motion.div
           className="
-          xtsm:max-sm:w-7/12  
-          sm:max-2xl:w-2/6
-          2xl:w-2/6 "
+          xtsm:max-sm:w-6/12  
+          sm:max-md:w-5/12
+          md:max-xl:w-4/12
+          xl:w-4/12"
           initial={{ opacity: 0, x: 120 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, eae: "easeOut", delay: 0.2 }}
