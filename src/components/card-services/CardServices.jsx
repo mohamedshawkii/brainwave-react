@@ -19,7 +19,7 @@ const varientCard = {
 
 function CardServices() {
   return (
-    <>
+    <section>
       <div
         className="
         flex flex-col 
@@ -116,8 +116,8 @@ function CardServices() {
             <motion.p
               className="font-bold"
               initial={{ opacity: "", x: 240 }}
-              whileInView={{ opacity: "", x: 0}}
-              transition={{ type: "spring",}}
+              whileInView={{ opacity: "", x: 0 }}
+              transition={{ type: "spring" }}
             >
               “OMG! I cannot believe that I have got a brand new landing page
               after getting Albino. It was super easy to edit and publish.”
@@ -133,7 +133,7 @@ function CardServices() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 
